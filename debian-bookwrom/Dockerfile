@@ -22,8 +22,7 @@ RUN apt-get update \
     && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config \
     && echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config \
     && echo "UseDNS no" >> /etc/ssh/sshd_config \
-    && mkdir /run/sshd \
-    && echo "root:root" | chpasswd
+    && mkdir /run/sshd && echo "root:root" | chpasswd
 
 VOLUME /data
 
