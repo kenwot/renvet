@@ -1,10 +1,10 @@
-# docker build -t renvet:bookworm .
+# docker build -t renvet:deb .
 
 FROM debian:bookworm
 
 LABEL maintainer="Kenown <kenown@msn.com>" \
-    name="Venvet Base Image" \
-    version="bookwrom" \
+    name="Venvet" \
+    version="deb" \
     description="A Debian 12 (bookworm) base image for Renvet"
 
 RUN apt-get update \
