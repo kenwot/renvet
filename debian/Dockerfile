@@ -8,7 +8,7 @@ LABEL maintainer="Kenown <kenown@msn.com>" \
     description="A Debian 12 (bookworm) base image for Renvet"
 
 RUN apt-get update \
-    && apt-get install -y procps vim openssl openssh-server openssh-client iproute2 iputils-ping wget curl lrzsz zip unzip \
+    && apt-get install -y procps vim openssh-server openssh-client iproute2 iputils-ping wget curl lrzsz zip unzip \
     && touch /etc/vim/vimrc.local \
     && echo "source /usr/share/vim/vim90/defaults.vim" >> /etc/vim/vimrc.local \
     && echo "let skip_defaults_vim = 1" >> /etc/vim/vimrc.local \
@@ -24,7 +24,7 @@ RUN apt-get update \
     && echo "UseDNS no" >> /etc/ssh/sshd_config \
     && mkdir /run/sshd && echo "root:root" | chpasswd
 
-VOLUME /data
+VOLUME /hostel
 
 EXPOSE 22
 
